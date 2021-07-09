@@ -1,0 +1,130 @@
+.funds {
+  font-size: 2rem;
+  position: absolute;
+  top: 5%;
+}
+.recharge {
+  position: absolute;
+  top: 2%;
+  background-color: lightgreen;
+  width: 200px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.vending-machine-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "items-container items-container payment-container"
+    "items-container items-container payment-container"
+    "item-door item-door item-door";
+}
+.items-container {
+  grid-area: items-container;
+}
+.payment-container {
+  grid-area: payment-container;
+}
+.item-door {
+  grid-area: item-door;
+}
+.vending-machine-body {
+  height: 75vh;
+  width: 30vw;
+  background-color: rgb(196, 53, 53);
+  border: 4px solid black;
+  border-radius: 10px;
+  display: grid;
+}
+
+.items-container {
+  background-color: lightcoral;
+  border-radius: 10px;
+  margin: 15% 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.vending-item {
+  background-color: lightgray;
+  border-radius: 40%;
+  width: 20%;
+  margin: 10% 5%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.vending-item:hover {
+  filter: brightness(110%);
+}
+
+.vending-item:active {
+  transform: scale(0.98);
+}
+
+.payment-container {
+  background-color: lightslategray;
+  border-radius: 10px;
+  margin: 90% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.display {
+  background-color: rgb(29, 28, 28);
+  border-radius: 10px;
+  color: rgb(42, 145, 42);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+}
+
+.pay-btn {
+  margin-top: 10px;
+  background-color: steelblue;
+  color: whitesmoke;
+  height: 20%;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  filter: brightness(110%);
+}
+
+.pay-btn:active {
+  transform: scale(0.98);
+}
+
+.item-door {
+  background-color: rgb(39, 39, 39);
+  border-radius: 10px;
+  margin: 10% 20%;
+  position: relative;
+}
+
+.dispensed-item {
+  position: absolute;
+  left: 40%;
+  height: 100%;
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  transform: rotate(90deg);
+  cursor: grab;
+}
